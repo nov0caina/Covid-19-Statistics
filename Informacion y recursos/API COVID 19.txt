@@ -1,0 +1,28 @@
+https://rapidapi.com/kaushikvapiwala/api/covid1910
+
+Get all data by Country
+-
+Get Confirmed, Death, Recovered by country and Date
+(Dia anterior)
+= Nuevos
+
+
+Function fetchHistorico(country_name, state){
+	
+}
+
+Function fetch(country_name, state, date){
+}
+
+let confirmadoH = fetchHistorico(mexico, confirmed);
+let recuperadoH = fetchHistorico(mexico, recovered);
+let deathH = fetchHistorico(mexico, death);
+
+let confirmadoD = fetchDiaAnterior(mexico, confirmed, date);
+let recuperadoD = fetchDiaAnterior(mexico, recovered, date);
+let deathD = fetchDiaAnterior(mexico, death, date);
+
+
+let NuevoConfirm = confirmadoH - confirmadoD;
+let NuevoRecover = recuperadoH - recuperadoD;
+let NuevoDeath = deathH - deathD;

@@ -18,17 +18,17 @@ import Buttons from '../components/Buttons';
 const DATA = [
   {
     id: 1,
-    title: "CORONAVIRUS CASES",
+    title: "CASOS DE COVID EN LAS ULTIMAS 24hrs",
     number: "1 838 456"
   },
   {
     id: 2,
-    title: "TOTAL DEATHS",
-    number: "1 29 863"
+    title: "FALLECIMIENTOS EN LAS ULTIMAS 24hrs",
+    number: "29 863"
   },
   {
     id: 3,
-    title: "RECOVERED",
+    title: "RECUPERADOS EN LAS ULTIMAS 24hrs",
     number: "838 456"
   }
 ]
@@ -59,9 +59,8 @@ export default class Home extends Component {
 
   renderNoMoreCards() {
     return (
-      <View title="All Domne!">
-        <Text style={styles.noCard}>NO MORE CARDS HERE</Text>
-        <Button backgroundColor="#03A9F4" title="Get more!" />
+      <View title="All Done!">        
+        <Button style={styles.noCard} title="VULEVE MAÑANA" />
       </View>
     );
   }
@@ -70,7 +69,7 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require("../images/unnamed.jpg")}
+          source={require("../images/mapamundi.png")}
           style={styles.map}
         >
           <View style={styles.col}>
@@ -112,34 +111,29 @@ export default class Home extends Component {
         >
           <Cards
             onPress={() => this.props.navigation.navigate('Details')}
-            icon="md-pulse"
-            title="TOTAL CASES"
+            icon="md-medkit"
+            title="CASOS TOTALES"
             bg="red"
             number="113 329"
           />
           <Cards
-            icon="ios-git-network"
-            title="RECOVERED"
+            icon="md-happy"
+            title="RECUPERADOS"
             bg="#FFF"
             number="442 329"
           />
           <Cards
             icon="ios-heart-dislike"
-            title="DEATH CASES"
+            title="FALLECIMIENTOS"
             bg="#FFF"
             number="113 329"
           />
         </ScrollView>
-        <View style={{ marginBottom: 34 }}>
+        <View style={{ marginBottom: 15 }}>
           <Buttons
-            name="ASYMPTOMATIC"
-            number="1 778"
-          />
-          <Buttons
-            name="SYMPTOMATIC"
-            number="1 578"
-          />
-
+            name="VER INFORMACION DE GOB.MX" 
+            icon="ios-exit"           
+          />          
         </View>
       </View>
     )
@@ -148,7 +142,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1c2732"
+    backgroundColor: "#658dd7"
   },
   cardContainer: {
     height: 150,
@@ -162,12 +156,12 @@ const styles = StyleSheet.create({
     width: 260,
     paddingTop: 20,
     paddingHorizontal: 30,
-    backgroundColor: '#2b3240',
+    backgroundColor: '#292D3E',
     borderRadius: 30,
     flexDirection: 'row'
   },
   title: {
-    color: "#6A706E",
+    color: "#B7B9BE",
     width: 100,
     fontSize: 12,
     fontWeight: "bold"
@@ -189,15 +183,17 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   noCard: {
-    marginBottom: 10,
+    marginTop:100,    
     color: '#FFF',
-    alignSelf: "center"
+    alignSelf: "center",
+    backgroundColor:"#03A9F4"
   },
   map: {
-    height: 200,
+    marginTop:10,
+    height: 140,
     paddingTop: 25,
     paddingHorizontal: 20,
-    marginBottom: 15
+    marginBottom: 0
   },
   col: {
     flexDirection: 'row'

@@ -21,45 +21,18 @@ export default class Details extends Component {
           </View>
           <View style={styles.profileContainer}>
             <Image
-              source={require('../images/1.jpeg')}
+              source={require('../images/nov0caina.png')}
               style={styles.profile}
             />
           </View>
         </View>
         <View style={styles.optionCard}>
           <View style={styles.optionCol}>
-            <Text style={styles.textLinear}>LINEAR</Text>
-          </View>
-          <Text style={styles.textLogarthimic}>LOGARTHIMIC</Text>
-        </View>
-        <View style={styles.locationContainer}>
-          <Text style={styles.textGlobal}>GLOBAL</Text>
-          <Text style={styles.textRussia}>RUSSIA</Text>
-          <View style={styles.reloadContainer}>
-            <Icon
-              name="md-refresh"
-              size={24}
-              color="red"
-            />
+            <Text style={styles.textLinear}>LINEA</Text>
           </View>
         </View>
-
-
         <Chart />
 
-        <View style={styles.bottomCard}>
-          <View style={styles.bottomCol}>
-            <Text style={styles.textSymptoms}>SYMPTOMS</Text>
-            <View style={styles.infoContainer}>
-              <Text style={{ color: "#FFF" }}>i</Text>
-            </View>
-          </View>
-
-          <View style={styles.button}>
-            <Text style={styles.btnText}>See more graphs</Text>
-          </View>
-
-        </View>
       </View>
     )
   }
@@ -124,7 +97,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "red"
   },
-  textRussia: {
+  textCountryUser: {
     fontWeight: "bold",
     fontSize: 16,
     color: "#6a706e",
@@ -143,7 +116,7 @@ const styles = StyleSheet.create({
   bottomCard: {
     backgroundColor: "#1c2732",
     height: 220,
-    marginTop: 20,
+    marginTop: 0,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },

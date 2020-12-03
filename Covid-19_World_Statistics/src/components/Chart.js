@@ -11,7 +11,7 @@ export default class Chart extends Component {
       }}>
         <LineChart
           data={{
-            labels: ["Jan", "Feb", "Mar", "Apr"],
+            labels: ["Sept", "Oct", "Nov", "Dic"],
             datasets: [
               {
                 data: [

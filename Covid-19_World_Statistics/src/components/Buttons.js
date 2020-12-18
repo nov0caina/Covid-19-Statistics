@@ -15,15 +15,15 @@ const Buttons = (props) => {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 10,
-    borderColor: "#6a706e",
+    borderColor: "red",
     borderWidth: 0.3,
     marginHorizontal: 30,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 8,
     flexDirection: "row",
     alignItems: "center",
     marginTop: 5,
-    backgroundColor: "#aabde1"
+    backgroundColor: "#292D3E"
   },
   circle: {
     alignItems: 'center',

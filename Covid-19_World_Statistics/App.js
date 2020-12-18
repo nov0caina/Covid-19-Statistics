@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native'
-import HomeStackNavigator from './src/navigations/Navigator';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeTabNavigator from './src/navigations/tabNavigator';
 
-const App = () => {
+//const Stack = createStackNavigator()
+
+export default function App() {
   return (
     <NavigationContainer>
-      <HomeStackNavigator />
+      <HomeTabNavigator />
     </NavigationContainer>
-  )
+  );
 }
-export default App;

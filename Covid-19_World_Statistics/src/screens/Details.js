@@ -21,7 +21,7 @@ export default class Details extends Component {
           </View>
           <View style={styles.profileContainer}>
             <Image
-              source={require('../images/nov0caina.png')}
+              source={require('../images/logo.png')}
               style={styles.profile}
             />
           </View>

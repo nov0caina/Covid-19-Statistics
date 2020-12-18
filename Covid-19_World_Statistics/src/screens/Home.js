@@ -12,8 +12,8 @@ import { ScrollView }
   from 'react-native-gesture-handler'
 import Deck from '../components/Deck';
 import Cards from '../components/Cards';
-import Buttons from '../components/Buttons';
-
+import RealoadIcon from '../components/ReloadIcon';
+import Details  from '../screens/Details'
 
 const DATA = [
   {
@@ -32,6 +32,7 @@ const DATA = [
     number: "838 456"
   }
 ]
+
 export default class Home extends Component {
 
   renderCard(item) {
@@ -59,11 +60,11 @@ export default class Home extends Component {
 
   renderNoMoreCards() {
     return (
-      <View title="All Done!">        
-        <Button style={styles.noCard} title="VULEVE MAÑANA" />
+      <View title="All Done!">
+
       </View>
     );
-  }
+  }    
 
   render() {
     return (
@@ -84,7 +85,7 @@ export default class Home extends Component {
             </View>
             <View style={styles.avatarContainer}>
               <Image
-                source={require('../images/nov0caina.png')}
+                source={require('../images/logo.png')}
                 style={styles.avatar}
               />
             </View>
@@ -92,10 +93,9 @@ export default class Home extends Component {
           <Text style={styles.textDash}>Covid-19 World Statistics</Text>
 
           <View style={styles.colContainer}>
-            <Text style={styles.textGlobal}>GLOBAL</Text>
-            <Text style={styles.textCountryUser}>Mexico</Text>
-            <View style={styles.reloadContainer}>
-              <Icon name="md-refresh" size={24} color="orange" />
+            <View>
+              <RealoadIcon
+              />
             </View>
           </View>
         </ImageBackground>
@@ -117,38 +117,35 @@ export default class Home extends Component {
             number="113 329"
           />
           <Cards
+            onPress={() => this.props.navigation.navigate('Details')}
             icon="md-happy"
             title="RECUPERADOS"
             bg="#FFF"
             number="442 329"
           />
           <Cards
+            onPress={() => this.props.navigation.navigate('Details')}
             icon="ios-heart-dislike"
             title="FALLECIMIENTOS"
             bg="#FFF"
             number="113 329"
           />
-        </ScrollView>
-        <View style={{ marginBottom: 15 }}>
-          <Buttons
-            name="VER INFORMACION DE GOB.MX" 
-            icon="ios-exit"           
-          />          
-        </View>
+        </ScrollView>        
       </View>
     )
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#658dd7"
+    backgroundColor: "#18191A"
   },
   cardContainer: {
     height: 150,
     width: 320,
     alignSelf: "center",
-    backgroundColor: "#6A706E",
+    backgroundColor: "#3A3B3C",
     borderRadius: 30
   },
   card: {
@@ -156,7 +153,7 @@ const styles = StyleSheet.create({
     width: 260,
     paddingTop: 20,
     paddingHorizontal: 30,
-    backgroundColor: '#292D3E',
+    backgroundColor: '#242526',
     borderRadius: 30,
     flexDirection: 'row'
   },
@@ -175,7 +172,7 @@ const styles = StyleSheet.create({
   },
   textCovid: {
     transform: [{ rotate: "-90deg" }],
-    color: "#3a4b4f",
+    color: "#bebebe",
     fontSize: 14,
     width: 90,
     marginLeft: -35,
@@ -183,13 +180,13 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   noCard: {
-    marginTop:100,    
+    marginTop: 100,
     color: '#FFF',
     alignSelf: "center",
-    backgroundColor:"#03A9F4"
+    backgroundColor: "#03A9F4"
   },
   map: {
-    marginTop:10,
+    marginTop: 10,
     height: 140,
     paddingTop: 25,
     paddingHorizontal: 20,
@@ -243,7 +240,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: "center",
-    marginLeft: 50
+    marginLeft: 240
   }
 
 

@@ -110,7 +110,7 @@ export default class Home extends Component {
           horizontal
         >
           <Cards
-            onPress={() => this.props.navigation.navigate('Details')}
+            onPress={() => this.props.navigation.navigate('Details')}            
             icon="md-medkit"
             title="CASOS TOTALES"
             bg="red"

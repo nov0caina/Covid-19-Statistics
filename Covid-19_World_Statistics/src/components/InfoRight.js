@@ -4,7 +4,7 @@ import { Text, View, Image, StyleSheet, ImageBackground, ScrollView } from 'reac
 export default class InfoRight extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text style={styles.text}>{this.props.Text}</Text>
         <Image
           style={styles.imagen}
@@ -15,14 +15,21 @@ export default class InfoRight extends Component {
   }
 }
 
-const styles = StyleSheet.create({  
-  imagen:{    
-    width:100,
-    height:100,
-    backgroundColor:'white',
-    borderRadius:100
+const styles = StyleSheet.create({
+  container: {
+    flex:1,    
+    backgroundColor: "#3A3B3C",
+    borderRadius: 20,
+    alignItems: 'flex-end'
   },
-  text:{
-    color:'white'
+  imagen: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'white',
+    borderRadius: 100,    
+  },
+  text: {
+    color: 'white',    
+    
   }
 })

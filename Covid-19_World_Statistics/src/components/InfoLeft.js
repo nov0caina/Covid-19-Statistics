@@ -4,7 +4,7 @@ import { Text, View, Image, StyleSheet, ImageBackground, ScrollView } from 'reac
 export default class InfoLeft extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text style={styles.text}>{this.props.Text}</Text>
         <Image
           style={styles.imagen}
@@ -16,11 +16,18 @@ export default class InfoLeft extends Component {
 }
 
 const styles = StyleSheet.create({  
+  container: {    
+    backgroundColor: "#494a4b",
+    borderRadius: 20,
+    alignItems: 'flex-start',
+    padding:10
+  },
   imagen:{    
     width:100,
     height:100,
     backgroundColor:'white',
-    borderRadius:100
+    borderRadius:100,    
+    marginTop:8
   },
   text:{
     color:'white'

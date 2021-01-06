@@ -13,13 +13,13 @@ import { ScrollView }
 import Deck from '../components/Deck';
 import Cards from '../components/Cards';
 import RealoadIcon from '../components/ReloadIcon';
-import Details  from '../screens/Details'
+import Details from '../screens/Details'
 
 const DATA = [
   {
     id: 1,
     title: "CASOS DE COVID EN LAS ULTIMAS 24hrs",
-    number: "1 838 456"
+    number: "38 456"
   },
   {
     id: 2,
@@ -29,11 +29,23 @@ const DATA = [
   {
     id: 3,
     title: "RECUPERADOS EN LAS ULTIMAS 24hrs",
-    number: "838 456"
+    number: "8 456"
   }
 ]
 
 export default class Home extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: false,
+      totals: [],
+      byCountryName: [],
+      urlTotals: 'https://covid-19-data.p.rapidapi.com/totals',
+      urlByCountryName: 'https://covid-19-data.p.rapidapi.com/country?name='
+    }
+  }
 
   renderCard(item) {
     return (
@@ -64,7 +76,7 @@ export default class Home extends Component {
 
       </View>
     );
-  }    
+  }
 
   render() {
     return (
@@ -110,18 +122,18 @@ export default class Home extends Component {
           horizontal
         >
           <Cards
-            onPress={() => this.props.navigation.navigate('Details')}            
+            onPress={() => this.props.navigation.navigate('Details')}
             icon="md-medkit"
             title="CASOS TOTALES"
             bg="red"
-            number="113 329"
+            number="1 113 329"
           />
           <Cards
             onPress={() => this.props.navigation.navigate('Details')}
             icon="md-happy"
             title="RECUPERADOS"
             bg="#FFF"
-            number="442 329"
+            number="989 329"
           />
           <Cards
             onPress={() => this.props.navigation.navigate('Details')}
@@ -130,7 +142,7 @@ export default class Home extends Component {
             bg="#FFF"
             number="113 329"
           />
-        </ScrollView>        
+        </ScrollView>
       </View>
     )
   }

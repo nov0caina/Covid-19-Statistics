@@ -18,18 +18,19 @@ export default class InfoRight extends Component {
 const styles = StyleSheet.create({
   container: {
     flex:1,    
-    backgroundColor: "#3A3B3C",
+    backgroundColor: "#2e2f30",
     borderRadius: 20,
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    padding:10
   },
   imagen: {
     width: 100,
     height: 100,
     backgroundColor: 'white',
     borderRadius: 100,    
+    marginTop:8
   },
   text: {
-    color: 'white',    
-    
+    color: 'white',        
   }
 })

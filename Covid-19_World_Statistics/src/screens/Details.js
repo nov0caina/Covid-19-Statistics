@@ -28,7 +28,7 @@ export default class Details extends Component {
         </View>
         <View style={styles.optionCard}>
           <View style={styles.optionCol}>
-            <Text style={styles.textLinear}>LINEA</Text>
+            <Text style={styles.textLinear}>Fallecimientos Totales</Text>
           </View>
         </View>
         <Chart />

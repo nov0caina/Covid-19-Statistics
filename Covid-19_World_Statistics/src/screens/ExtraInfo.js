@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View, Image, StyleSheet, ScrollView } from 'react-native'
+import { Text, View, Image, StyleSheet, ScrollView, ImageBackground } from 'react-native'
+import Icon from '@expo/vector-icons/Ionicons';
 import Buttons from '../components/Buttons';
 import InfoRight from '../components/InfoRight';
 import InfoLeft from '../components/InfoLeft';
@@ -11,14 +12,31 @@ export default class ExtraInfo extends Component {
         <ScrollView
           showsVerticalScrollIndicator={true}
           vertical
+        >          
+        <ImageBackground
+          source={require("../images/mapamundi.png")}
+          style={styles.map}
         >
-          <View style={styles.avatarContainer}>
-            <Image
-              source={require('../images/logo.png')}
-              style={styles.avatar}
-            />
-            <Text style={styles.textDash}>Algunos tips para reducir el riesgo de contagio y desinformación</Text>
+          <View style={styles.col}>
+            <View style={{ width: "50%" }}>
+              <Icon name="md-remove" color="#FFF" size={26} />
+              <Icon
+                name="md-remove"
+                color="#FFF"
+                size={26}
+                style={styles.minusIcon}
+              />
+            </View>
+            <View style={styles.avatarContainer}>
+              <Image
+                source={require('../images/logo.png')}
+                style={styles.avatar}
+              />
+            </View>
           </View>
+          <Text style={styles.textDash}>Consejos para prevenir el contagio del Covid-19</Text>
+
+        </ImageBackground>
 
           <View style={styles.infoContainerRight}>
             <InfoRight
@@ -49,8 +67,8 @@ export default class ExtraInfo extends Component {
           </View>
 
           <View style={styles.button}>
-            <Buttons              
-              name="VER INFORMACION DE GOB.MX"
+            <Buttons
+              name="Ver Noticias Verificadas"
               icon="ios-exit"
             />
           </View>
@@ -66,18 +84,53 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#18191A"
   },
+  col: {
+    flexDirection: 'row'
+  },
+  map: {
+    marginTop: 10,
+    height: 140,
+    paddingTop: 25,
+    paddingHorizontal: 20,
+    marginBottom: 0
+  },
+  minusIcon: {
+    marginTop: -20,
+    marginLeft: 5
+  },
+  avatarContainer: {
+    width: "50%",
+    alignItems: 'flex-end',
+  },
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20
+  },
+  textDash: {
+    color: "#FFF",
+    fontSize: 20,
+    alignSelf: 'center',    
+    marginTop: 15,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
   infoContainerRight: {
     width: "90%",
-    marginBottom: 15
+    marginBottom: 15,
+    marginLeft: 15,
+    marginRight: 15
   },
   infoContainerLeft: {
     width: "90%",
-    marginBottom: 15
+    marginBottom: 15,
+    marginLeft: 15,
+    marginRight: 15
   },
   button: {
-  marginBottom: 80
+    marginBottom: 80
   },
-  avatarContainer: {
+  /*avatarContainer: {
     width: "100%",
     alignItems: 'flex-end',
     marginTop: 30,
@@ -88,14 +141,14 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20,
     marginRight: 10
-  },
+  },  
   textDash: {
     color: "#FFF",
     fontSize: 20,
     alignSelf: 'center',
     marginTop: 15,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 20,
+    marginRight: 20,
     fontWeight: 'bold'
-  }
+  }*/
 })

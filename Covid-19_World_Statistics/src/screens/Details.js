@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
 import Chart from '../components/Chart';
 
 export default class Details extends Component {
-  render() {
+
+  render() {    
     return (
       <View style={styles.page}>
         <View style={styles.headContainer}>
@@ -28,15 +29,15 @@ export default class Details extends Component {
         </View>
         <View style={styles.optionCard}>
           <View style={styles.optionCol}>
-            <Text style={styles.textLinear}>Fallecimientos Totales</Text>
+            <Text style={styles.textLinear}>Totales</Text>
           </View>
         </View>
-        <Chart />
-
+        <Chart/>
       </View>
     )
   }
 }
+
 const styles = StyleSheet.create({
   page: {
     backgroundColor: "#FFF",

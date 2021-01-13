@@ -3,15 +3,20 @@ import { View, Text, StyleSheet, Linking } from 'react-native'
 import Icon from '@expo/vector-icons/Ionicons'
 
 const Buttons = (props) => {
+  
   return (
     <View style={styles.container}>      
       <View>
         <Icon style={styles.iconStyle} size={25} name="md-heart" />
       </View>            
-      <Text style={styles.btnName} onPress={() => { Linking.openURL('https://coronavirus.gob.mx/'); }}>{props.name}</Text>
-    </View>
+      <Text style={styles.btnName} onPress={() => { Linking.openURL('https://infodemia.mx/categoria?categorias%5B0%5D=covid'); }}>{props.name}</Text>
+    </View>    
   );
+  
 }
+
+
+
 const styles = StyleSheet.create({
   container: {
     borderRadius: 10,
@@ -34,12 +39,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   iconStyle: {
-    color: "#E2252B"    
+    color: "#E2252B",
+    marginLeft:8
   },
   btnName: {
     fontWeight: 'bold',
     color: "#FFF",
-    fontSize: 12,
+    fontSize: 18,
     marginLeft: 20
   },
   number: {

@@ -7,6 +7,7 @@ import Details from '../screens/Details';
 import ExtraInfo from '../screens/ExtraInfo';
 import TabBar from '../components/TabBar';
 
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const screenOptionStyle = {
@@ -37,7 +38,7 @@ function HomeTabNavigator() {
         initialParams={{ icon: 'home' }}
       />
       <Tab.Screen
-        name='Informacion'
+        name='Consejos'
         component={ExtraInfo}
         initialParams={{ icon: 'heart' }}
       />                  
